@@ -9,6 +9,7 @@
     opacity: 0.2;
     text-shadow: 0 1px 0 #FFFFFF;
 }
+
 .msg_error, .msg_info, .msg_success, .msg_warning{
     -moz-border-radius: 4px 4px 4px 4px;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
