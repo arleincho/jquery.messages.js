@@ -2,7 +2,7 @@
 
 ;(function($){
     
-    $.fn.messeges = function(options) {
+    $.fn.messages = function(options) {
         var defaults = {
             type: 'error',
             position: 'lt',
@@ -21,15 +21,15 @@
                 _width = $(input).width();
                 x = $(input).offset().left;
                 y = $(input).offset().top;
-                _style = 'msj_' + opts.type;
-                _close = $('<div class="close" rel="msj">x</div>');
+                _style = 'msg_' + opts.type;
+                _close = $('<div class="close" rel="msg">x</div>');
                 style_options = {};
                 if(opts.type == 'success'){
                     x = 15;
                     style_options.bottom = 25;
                     style_options.left = 15;
-                    if($('#content-msj-info').length == 0){
-                        $('<div></div>').attr('id', 'content-msj-info').prependTo('body');
+                    if($('#content-msg-info').length == 0){
+                        $('<div></div>').attr('id', 'content-msg-info').prependTo('body');
                     }
                     contenedor = '#content-msj-info';
                     
@@ -88,7 +88,7 @@
                     }
                 }
                 $('.close').live('click', function(){
-                    if($(this).attr('rel') == 'msj'){
+                    if($(this).attr('rel') == 'msg'){
                         $(this).parent("div").slideUp('slow').remove()
                     }
                 });
